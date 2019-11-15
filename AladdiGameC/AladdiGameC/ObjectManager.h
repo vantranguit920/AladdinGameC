@@ -15,10 +15,6 @@ protected:
 	Viewport* viewport;
 	Map* map;
 	
-	
-
-
-
 	Sound *sound;
 	GSound *soundGame;
 	vector <Object*> listObjectCollison;

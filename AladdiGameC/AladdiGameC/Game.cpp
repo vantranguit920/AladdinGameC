@@ -1,5 +1,5 @@
 ﻿#include "Game.h"
-
+ #include "SceneDemo.h"
 Game::Game(HINSTANCE Hins, int width, int height, char* name,int fps)
 {
 	this->hInstance = Hins;
@@ -12,10 +12,10 @@ Game::Game(HINSTANCE Hins, int width, int height, char* name,int fps)
 
 Game::~Game()
 {
-	delete graphic;
+	delete graphic; 
 	keyboard->KillKeyboard();
 	delete keyboard;
-	delete SceneManager;
+	delete sceneManager;
 }
 
 //Hàm xử lý cửa sổ
@@ -97,8 +97,12 @@ void Game::InitSound()
 
 void Game::InitScene()
 {
-	SceneManager = new Scene();
-	SceneManager->Init(graphic);
+	sceneManager = new SceneManager();
+	//sceneManager->Init(this->graphic);
+	sceneDemo = new SceneDemo(this->graphic);
+	//sceneDemo->Init(this->graphic);
+	sceneManager->ReplaceScene(sceneDemo);
+	
 }
 
 void Game::Init()
@@ -156,13 +160,13 @@ void Game::Update(float dt)
 {
 	//Lấy trạng thái bàn phím, chuột
 	keyboard->GetStage();
-	SceneManager->Update(dt, keyboard);
+	sceneDemo->Update(dt, keyboard);
 }
 
 //Vẽ các Object trong game
 void Game::Render()
 {
 	graphic->Begin();
-	SceneManager->Render();
+	sceneDemo->Draw();
 	graphic->End();
 }

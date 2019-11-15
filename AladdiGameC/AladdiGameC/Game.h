@@ -4,6 +4,8 @@
 #include "Keyboard.h"
 #include "Sound.h"
 #include "Scene.h"
+#include "SceneManager.h"
+#include "SceneDemo.h"
 
 class Game
 {
@@ -24,7 +26,9 @@ private:
 
 	Sound *sound;
 
-	Scene* SceneManager;
+	SceneManager* sceneManager;
+	SceneDemo* sceneDemo;
+	//Scene* SceneManager;
 
 public:
 	Game(HINSTANCE hInstance, int width, int height, char* name, int fps);
@@ -35,7 +39,7 @@ public:
 
 	//Tạo Graphic
 	bool InitGraphic();
-
+	
 	//Tạo bàn phím
 	void InitKeyboard();
 
