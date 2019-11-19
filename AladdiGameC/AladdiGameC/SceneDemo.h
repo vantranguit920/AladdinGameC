@@ -17,7 +17,8 @@ class SceneDemo :public Scene
 private:
 	Map* map;
 	Object* object;
-	
+	Grid* grid = new Grid();
+
 	std::unordered_set<Object*> visibleObject;
 	std::vector<Object*> listObject;
 	int currentLevel;
