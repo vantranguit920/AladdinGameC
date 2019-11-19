@@ -15,7 +15,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	Game game(hInstance, WinWidth, WinHeight, "Aladin", 60);
 
 	game.Init();
-	game.Run();
+	game.Run(); 
 
 	FreeConsole();
 

@@ -4,7 +4,7 @@ MapObjectGroup::MapObjectGroup(TiXmlElement *node)
 {
 	ReadXML(node);
 }
-MapObjectGroup::~MapObjectGroup()
+MapObjectGroup::~MapObjectGroup() 
 {
 	for (std::size_t i = 0; i < numObjects; i++)
 	{

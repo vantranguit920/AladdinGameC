@@ -12,7 +12,7 @@ public:
 	Scene();
 	~Scene();
 
-	//Load Data Game
+	//Load Data Game 
 	void Init(Graphic* graphic);
 
 	//Update Game sau khoảng thời gian dt

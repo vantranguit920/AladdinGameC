@@ -3,9 +3,10 @@
 #include"TinyXML\tinyxml.h"
 #include "Define.h"
 #include "TileSet.h"
-#include "MapObjectGroup.h"
+#include "MapObjectGroup.h" 
 #include "Object.h"
 #include "Stage.h"
+#include "Grid.h"
 
 using namespace Define;
 
@@ -16,7 +17,7 @@ protected:
 	int width, height, tileWidth, tileHeight;
 	int _data[300][300];
 	int numObjectGroups;
-
+	Grid *grid;
 	TileSet* tileSet;
 	vector<MapObjectGroup*> objectGroups;
 
@@ -36,5 +37,9 @@ public:
 
 	void Update(float dt);
 	void Render(Viewport * viewport);
+
+
+	void WriteGrid(Grid *grid);
+	void WriteCell(TiXmlElement *root, Grid *grid);
 };
 

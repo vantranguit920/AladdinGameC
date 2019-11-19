@@ -24,8 +24,29 @@ Map::Map(Graphic* graphic)
 		r.right = r.top;
 	else
 		r.top = r.right;
+	grid = new Grid();
+	for (int i = 0; i < numObjectGroups; i++)
+	{
+		for (int j = 0; j < objectGroups.at(i)->numObjects; j++)
+		{
+			Object *obj = new Object();
+			float x = objectGroups.at(i)->objects.at(j)->x;
+			float y = objectGroups.at(i)->objects.at(j)->y;
+			float w = objectGroups.at(i)->objects.at(j)->width;
+			float h = objectGroups.at(i)->objects.at(j)->height;
+			D3DXVECTOR2 pos;
+			pos.x = x + w / 2;
+			pos.y = height * tileHeight - y - h / 2;
+			obj->SetPosition(pos);
+			obj->SetBound(w, h);
+			obj->id = objectGroups.at(i)->objects.at(j)->id;
+			obj->SetName(objectGroups.at(i)->objects.at(j)->name);
+			grid->AddObject(obj);
+		}
+	}
+	WriteGrid(grid);
 
-	
+
 }
 
 Map::~Map()
@@ -76,6 +97,10 @@ void Map::ReadXML(Graphic* graphic, const char *path)
 		// strtok nhận vào NULL, để nó có thể tiếp tục tìm kiếm từ vị trí kết thúc trước đó.
 		token = strtok(NULL, ",");
 	}
+	TiXmlElement* objectGroup = layer->NextSiblingElement();
+	MapObjectGroup *Enemy = new MapObjectGroup(objectGroup);
+	objectGroups.push_back(Enemy);
+	numObjectGroups++;
 
 	
 }
@@ -108,20 +133,21 @@ void Map::Render(Viewport * viewport)
 			int id = _data[h][w];
 			if (id > 0)
 			{
-				D3DXVECTOR2 position(w * tileWidth, (h + 1) * tileHeight);
+				D3DXVECTOR2 position(w * tileWidth, (h) * tileHeight);
 				RECT obj;
 				obj.left = position.x;
-				obj.top = position.y;
+				obj.top = position.y-32;
 				obj.right = obj.left + 32;
-				obj.bottom = obj.top + 32;
+				obj.bottom = obj.top +32;
+
 				if (viewport->isContains(obj)) {
 					tileSet->Render(viewport, id, position);
 				}
 
 				
 			}
-		}
-*/
+		}*/
+
 
 
 	int startH, startW, endH, endW;
@@ -131,9 +157,12 @@ void Map::Render(Viewport * viewport)
 	startW = r.left / tileWidth;
 	endW = r.right / tileWidth + 1;
 
-	for (int h = startH; h < endH; h++) {
+	for (int h = startH; h < endH; h++) { 
 		for (int w = startW; w < endW; w++)
 		{
+			if (h < 0 || w < 0) {
+				continue;
+			}
 			int id = _data[h][w];
 			if (id > 0)
 			{
@@ -142,8 +171,45 @@ void Map::Render(Viewport * viewport)
 			}
 		}
 	}
-		
+	
+}
 
+void Map::WriteGrid(Grid * grid)
+{
+	TiXmlDocument doc;
+	TiXmlDeclaration *dec = new TiXmlDeclaration("1.0", "utf-8", "");
+	doc.LinkEndChild(dec);
+	TiXmlElement* root = new TiXmlElement("Grid");
+	WriteCell(root, grid);
+	doc.LinkEndChild(root);
+	doc.SaveFile("Resource Files/Grid.xml");
 
+}
 
+void Map::WriteCell(TiXmlElement * root, Grid * grid)
+{
+	for (int i = 0; i < grid->getNumRows(); i++) {
+		for (int j = 0; j < grid->getNumCols(); j++) {
+			TiXmlElement* Cel = new TiXmlElement("Cell");
+			Cel->SetAttribute("x", i);
+			Cel->SetAttribute("y", j);
+			Cel->SetAttribute("w", 250);
+			Cel->SetAttribute("h", 250);
+			int cout = 0;
+			for (auto o : grid->GetCell(i,j)->objects)
+			{
+				TiXmlElement* obj = new TiXmlElement("object");
+				obj->SetAttribute("name", (o->GetName().c_str()));
+				obj->SetAttribute("x", o->GetPosition().x);
+				obj->SetAttribute("y", o->GetPosition().y);
+				obj->SetAttribute("w", o->GetWidth());
+				obj->SetAttribute("h",o->GetHeight());
+				obj->SetAttribute("id", o->id);
+				Cel->LinkEndChild(obj);
+				cout++;
+			}
+			Cel->SetAttribute("numobject", cout);
+			root->LinkEndChild(Cel);
+		}
+	}
 }

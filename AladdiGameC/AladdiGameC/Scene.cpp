@@ -13,7 +13,7 @@ Scene::~Scene()
 
 //Load Data Game
 void Scene::Init(Graphic* graphic)
-{
+{ 
 	objManager = new ObjectManager();
 	objManager->Init(graphic);
 }

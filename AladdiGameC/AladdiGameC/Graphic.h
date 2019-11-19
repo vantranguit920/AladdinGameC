@@ -35,7 +35,7 @@ public:
 	//Kết thúc vẽ
 	void End();
 
-	static Graphic *getInstance();
+	static Graphic *getInstance(); 
 
 	//Load 1 Texture
 	LPDIRECT3DTEXTURE9 LoadTexture(string path, D3DCOLOR);

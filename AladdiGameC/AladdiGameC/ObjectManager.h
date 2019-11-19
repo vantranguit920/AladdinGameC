@@ -6,6 +6,9 @@
 #include "Map.h"
 #include "Sound.h"
 #include "Aladdin.h"
+#include "Brick.h"
+#include "pendulum.h"
+#include "Bat.h"
 
 class ObjectManager
 {
@@ -29,12 +32,24 @@ protected:
 	
 	
 	
-
+	int timecout = 0;
 
 	Aladdin *aladin;
-
 	Sprite *spriteAladdin;
 	SpriteSheet *infoAlddin;
+
+	Brick *brick;
+	Brick *brick2;
+	Sprite *spriteBrick;
+	SpriteSheet *infoBrick;
+	
+	pendulum *pendu;
+	Sprite *spritePendu;
+	SpriteSheet *infoPendu;
+
+	Bat *bat;
+	Sprite *spriteBat;
+	SpriteSheet *infoBat;
 
 public:
 	ObjectManager();
@@ -45,7 +60,7 @@ public:
 	//Update Game sau khoảng thời gian dt
 	void Update(float dt, Keyboard* key);
 
-	//Vẽ Object lên màn hình
+	//Vẽ Object lên màn hình 
 	void Render();
 
 	/*void ReadQuadTree(TiXmlElement *root, QuadTree *node, QuadTree *father, int indexNode);*/

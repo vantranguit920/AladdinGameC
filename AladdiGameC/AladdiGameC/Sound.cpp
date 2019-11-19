@@ -10,7 +10,7 @@ Sound::Sound(HWND Hwnd)
 Sound::~Sound()
 {
 
-}
+} 
 
 bool Sound::Init_DirectSound()
 {

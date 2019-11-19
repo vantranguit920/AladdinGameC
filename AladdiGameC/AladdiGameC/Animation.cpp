@@ -4,7 +4,7 @@
 Animation::Animation(SpriteSheet* spriteSheet)
 {
 	this->spriteSheet = spriteSheet;
-	delay = 0;
+	delay = 0; 
 	start = 0;
 	end = 0;
 	repeat = true;

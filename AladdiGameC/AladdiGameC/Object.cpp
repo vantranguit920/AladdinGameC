@@ -10,7 +10,7 @@ Object::~Object()
 }
 
 void Object::New()
-{
+{ 
 }
 
 bool Object::GetFlipFlag()

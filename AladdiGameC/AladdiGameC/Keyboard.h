@@ -10,7 +10,7 @@ class Keyboard
 
 public:
 	Keyboard(HWND hWnd);
-	~Keyboard();
+	~Keyboard(); 
 
 	//Cài đặt bàn phím
 	bool Init();

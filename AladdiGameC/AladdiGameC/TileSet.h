@@ -5,7 +5,7 @@
 #include "Graphic.h"
 using namespace std;
 
-class TileSet
+class TileSet 
 {
 protected:
 	Sprite* sprite;

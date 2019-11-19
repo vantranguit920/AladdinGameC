@@ -7,7 +7,7 @@ class Text
 {
 protected:
 	Graphic *graphic;
-	ID3DXFont *font;
+	ID3DXFont *font; 
 public:
 	Text(Graphic *graphic, int size);
 	~Text();

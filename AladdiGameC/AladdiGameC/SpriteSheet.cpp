@@ -6,7 +6,7 @@ SpriteSheet::SpriteSheet(const char* path)
 }
 
 SpriteSheet::~SpriteSheet()
-{
+{ 
 }
 
 
@@ -37,7 +37,7 @@ void SpriteSheet::ReadXML(const char* path)
 			sprite->QueryFloatAttribute("h", &this->tile[n].h);
 			sprite->QueryFloatAttribute("pX", &this->tile[n].gx);
 			sprite->QueryFloatAttribute("pY", &this->tile[n].gy);
-			
+			sprite->QueryFloatAttribute("kY", &this->tile[n].ky);
 
 			this->tile[n].tx = 0;
 			this->tile[n].ty = 0;

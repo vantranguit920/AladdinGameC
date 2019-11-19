@@ -40,6 +40,12 @@
     <Filter Include="TinyXML">
       <UniqueIdentifier>{7f5f14e7-0411-4e17-82c0-afaf5c357ce9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Object\Enemy">
+      <UniqueIdentifier>{3d768fa4-901f-4fd8-87e5-1b994c5459bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Map\Grid">
+      <UniqueIdentifier>{34cff001-9bba-44ab-a64a-81a8cd4b2b24}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Animation.cpp">
@@ -123,6 +129,21 @@
     <ClCompile Include="ObjectManager.cpp">
       <Filter>Object</Filter>
     </ClCompile>
+    <ClCompile Include="Brick.cpp">
+      <Filter>Map</Filter>
+    </ClCompile>
+    <ClCompile Include="pendulum.cpp">
+      <Filter>Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Bat.cpp">
+      <Filter>Object\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Cell.cpp">
+      <Filter>Map\Grid</Filter>
+    </ClCompile>
+    <ClCompile Include="Grid.cpp">
+      <Filter>Map\Grid</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animation.h">
@@ -202,6 +223,21 @@
     </ClInclude>
     <ClInclude Include="ObjectManager.h">
       <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Brick.h">
+      <Filter>Map</Filter>
+    </ClInclude>
+    <ClInclude Include="pendulum.h">
+      <Filter>Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Bat.h">
+      <Filter>Object\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Cell.h">
+      <Filter>Map\Grid</Filter>
+    </ClInclude>
+    <ClInclude Include="Grid.h">
+      <Filter>Map\Grid</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

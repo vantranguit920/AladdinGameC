@@ -10,7 +10,7 @@ protected:
 public:
 	Sound(HWND);
 	~Sound();
-
+	 
 	bool Init_DirectSound();
 	GSound *LoadSound(LPTSTR);
 	void PlaySound(GSound *);

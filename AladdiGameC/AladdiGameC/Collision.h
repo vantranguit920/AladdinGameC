@@ -5,7 +5,7 @@
 
 class Collision
 {
-public:
+public: 
 	Collision();
 	~Collision();
 

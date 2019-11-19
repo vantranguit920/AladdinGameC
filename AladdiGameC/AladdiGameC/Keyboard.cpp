@@ -8,7 +8,7 @@ Keyboard::Keyboard(HWND hWnd)
 	ZeroMemory(&this->key_buffer, sizeof(this->key_buffer));
 }
 
-Keyboard::~Keyboard()
+Keyboard::~Keyboard() 
 {
 }
 

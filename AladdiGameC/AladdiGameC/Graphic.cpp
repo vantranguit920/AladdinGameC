@@ -8,7 +8,7 @@ Graphic::Graphic(HWND hWnd, int width, int height)
 	this->d3d = NULL;
 	this->d3ddv = NULL;
 	this->d3dSprite = NULL;
-	this->_instance = this;
+	this->_instance = this; 
 }
 Graphic* Graphic::getInstance() {
 	return _instance;

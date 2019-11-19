@@ -7,7 +7,7 @@ Viewport::Viewport()
 }
 
 Viewport::Viewport(float x, float y)
-{
+{ 
 	this->positionWorld.x = x;
 	this->positionWorld.y = y;
 	//Mặc định là kích thước game

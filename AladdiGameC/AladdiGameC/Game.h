@@ -52,7 +52,7 @@ public:
 	void Run();
 
 	//Update Game sau khoảng thời gian dt
-	void Update(float dt);
+	void Update(float dt); 
 
 	//Vẽ Object lên màn hình
 	void Render();

@@ -3,7 +3,7 @@
 #include "Collision.h"
 #include "Sound.h"
 
-class Object
+class Object 
 {
 protected:
 	Sprite* sprite;

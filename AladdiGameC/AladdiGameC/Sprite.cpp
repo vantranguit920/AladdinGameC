@@ -3,17 +3,18 @@
 
 Sprite::Sprite()
 {
-}
+} 
 
 //Contructor
-Sprite::Sprite(Graphic* graphic, const char* pathpng)
+Sprite::Sprite(Graphic* graphic, const char* pathpng, D3DCOLOR colors)
 {
 	this->graphic = graphic;
-	texture = this->graphic->LoadTexture(pathpng, D3DCOLOR_XRGB(255, 0, 255));
+	
+	texture = this->graphic->LoadTexture(pathpng, colors);
 	this->scale = D3DXVECTOR2(1, 1);
 	transform = D3DXVECTOR2(0, 0);
 	position = D3DXVECTOR2(0, 0);
-	color = D3DCOLOR_XRGB(225, 225, 225);
+	
 	angle = 0;
 	flipFlag = false;
 }
@@ -126,6 +127,7 @@ void Sprite::SetFlipFlag(bool flag)
 //Lật hình theo trục y
 void Sprite::Flip(bool flag)
 {
+	
 	if (flag)
 	{
 		scale = D3DXVECTOR2(-scale.x, scale.y);

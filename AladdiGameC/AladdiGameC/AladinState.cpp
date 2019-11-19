@@ -91,7 +91,7 @@ void AladinState::jumState(Keyboard* key) {
 
 	if (isjum) {
 		if (Aladdin->GetPosition().y-startJum  > JumpMax) {
-			
+			Aladdin->SetVelocityY(-JumpSpeed);
 			this->state = State::fall;
 			isjum = false;
 		}
@@ -100,12 +100,17 @@ void AladinState::jumState(Keyboard* key) {
 }
 void AladinState::fallState(Keyboard* key) {
 
-	if (Aladdin->GetVelocity().y == 0) {
+	/*if (Aladdin->GetVelocity().y == 0) {
 		this->state = State::Standing;
 	}
 	else {
 		Aladdin->SetVelocityY(Aladdin->GetVelocity().y - FallAcceleration);
 		this->state = State::fall;
+	}*/
+
+	if (Aladdin->GetPosition().y <= startJum) {
+		Aladdin->SetVelocityY(0);
+		this->state = State::Standing;
 	}
 	
 }

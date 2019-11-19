@@ -4,7 +4,7 @@
 #include <vector>
 using namespace std;
 #include "TinyXML\tinyxml.h"
-
+ 
 class MapObjectGroup
 {
 public:

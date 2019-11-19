@@ -4,7 +4,7 @@
 #include "Keyboard.h"
 #include "SpriteSheet.h"
 #include "ViewPort.h"
-
+ 
 class Sprite
 {
 protected:
@@ -29,7 +29,7 @@ protected:
 
 public:
 	Sprite();
-	Sprite(Graphic* graphic, const char* pathsprite);
+	Sprite(Graphic* graphic, const char* pathsprite, D3DCOLOR colors);
 	~Sprite();
 
 	virtual float GetWidth();

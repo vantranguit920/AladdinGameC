@@ -29,14 +29,12 @@ namespace Define
 	const float FallAcceleration = 0.5f;
 
 	//Distance
-	const float JumpMax = 80.0f;
+	const float JumpMax = 100.0f;
 	const float JumpMin = 50.0f;
 	const float GlideMax = 100.0f;
 	const float GlideMin = 30.f;
 
 	//Time
 	const float DelayAnimation = 0.2f;
-	const float TimeBulletLv2 = 0.3f;
-	const float TimeBulletLv3 = 1.0f;
-	const float TimeItem = 4.0f;
+	
 }

@@ -7,7 +7,7 @@ Text::~Text()
 		font->Release();
 		font = NULL;
 	}
-}
+} 
 Text::Text(Graphic *graphic, int size)
 {
 	this->graphic = graphic;

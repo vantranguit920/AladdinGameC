@@ -12,7 +12,7 @@ Stage::~Stage()
 RECT Stage::GetBound()
 {
 	return bound;
-}
+} 
 
 void Stage::SetBound(RECT bound)
 {

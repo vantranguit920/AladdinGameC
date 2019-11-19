@@ -12,6 +12,7 @@ public:
 	AladdinAnimation();
 	~AladdinAnimation();
 	void standAnimation();
+
 	void jumpAnimation();
 	void fallAnimation();
 	void runAnimation();

@@ -12,7 +12,7 @@ public:
 	Stage();
 	~Stage();
 
-	RECT GetBound();
+	RECT GetBound(); 
 	void SetBound(RECT bound);
 
 	string GetName();

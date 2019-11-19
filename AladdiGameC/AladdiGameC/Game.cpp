@@ -88,7 +88,7 @@ void Game::InitKeyboard()
 {
 	this->keyboard = new Keyboard(hWnd);
 	this->keyboard->Init();
-}
+} 
 
 void Game::InitSound()
 {

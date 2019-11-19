@@ -8,7 +8,7 @@ class Aladdin:public Object
 protected:
 	AladdinAnimation *animAla;
 	AladinState *stateAla;
-	AladinState::State state;
+	AladinState::State state; 
 	int delay;
 
 	bool lock;

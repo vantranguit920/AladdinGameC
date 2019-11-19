@@ -37,7 +37,7 @@ public:
 	void fallState(Keyboard* key);
 
 
-	State GetState();
+	State GetState(); 
 	void SetState(State State);
 
 	void Update(float dt, Keyboard* keyboard);

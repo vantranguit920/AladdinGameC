@@ -5,7 +5,7 @@ class Animation : public Sprite
 {
 protected:
 	SpriteSheet* spriteSheet;
-	float timeCurrent;
+	float timeCurrent; 
 	float delay;
 	int index, start, end, indexPause;
 	bool repeat;

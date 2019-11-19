@@ -9,7 +9,7 @@ using namespace Define;
 
 
 class Viewport
-{
+{ 
 protected:
 
 	D3DXVECTOR2 positionWorld;

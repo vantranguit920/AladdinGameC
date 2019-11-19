@@ -55,7 +55,7 @@ float Collision::CollisionAABB(RECT object, RECT other, D3DXVECTOR2 distance, D3
 		side.y = 0.0f;
 		return 1.0f;
 	}
-	
+	 
 	float dxEntry, dxExit;
 	float dyEntry, dyExit;
 

@@ -6,7 +6,7 @@ class SpriteSheet
 {
 protected:
 	float width, height;
-	struct Tile
+	struct Tile 
 	{
 		float x;
 		float y;
@@ -18,6 +18,7 @@ protected:
 		float gy;
 		float sx;
 		float sy;
+		float ky;
 	};
 	
 public:
