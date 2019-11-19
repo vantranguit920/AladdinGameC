@@ -12,7 +12,7 @@ class Viewport
 {
 protected:
 
-	
+	D3DXVECTOR2 positionWorld;
 	float width;
 	float height;
 	/*RECT stage0 = { 0, 1280, 768, 1056 };
@@ -26,7 +26,6 @@ protected:
 	bool inStageBoss;
 
 public:
-	D3DXVECTOR2 positionWorld;
 	Viewport();
 	//x và y là tọa độ thế giới left-top
 	Viewport(float x, float y);
