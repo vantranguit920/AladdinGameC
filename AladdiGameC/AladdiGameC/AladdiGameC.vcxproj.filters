@@ -144,6 +144,9 @@
     <ClCompile Include="Grid.cpp">
       <Filter>Map\Grid</Filter>
     </ClCompile>
+    <ClCompile Include="Arrow.cpp">
+      <Filter>Map</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animation.h">
@@ -238,6 +241,9 @@
     </ClInclude>
     <ClInclude Include="Grid.h">
       <Filter>Map\Grid</Filter>
+    </ClInclude>
+    <ClInclude Include="Arrow.h">
+      <Filter>Map</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

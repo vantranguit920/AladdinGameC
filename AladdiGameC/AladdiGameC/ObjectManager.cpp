@@ -33,11 +33,16 @@ void ObjectManager::Init(Graphic* graphic)
 	//
 	spritePendu = new Sprite(graphic, "./Resource Files/pendulum.png", D3DCOLOR_XRGB(163, 73, 164));
 	infoPendu = new SpriteSheet("./Resource Files/conlacxml.xml");
+
+	spriteArrow = new Sprite(graphic, "./Resource Files/arrow.png", D3DCOLOR_XRGB(163, 73, 164));
+	infoArrow = new SpriteSheet("./Resource Files/arrow.xml");
+
 	spriteBat = new Sprite(graphic, "./Resource Files/Batxml.png", D3DCOLOR_XRGB(163, 73, 164));
 	infoBat = new SpriteSheet("./Resource Files/Batsprite.xml");
 	
 	
 	pendu = new pendulum(spritePendu, infoPendu, D3DXVECTOR2(400, 621));
+	arrow = new Arrow(spriteArrow, infoArrow, D3DXVECTOR2(320, 521));
 	brick = new Brick(spriteBrick, infoBrick, D3DXVECTOR2(350,621));
 	brick2 = new Brick(spriteBrick, infoBrick, D3DXVECTOR2(300, 621));
 
@@ -74,6 +79,7 @@ void ObjectManager::Update(float dt, Keyboard* keyboard)
 	brick->Update(dt,keyboard);
 	brick2->Update(dt, keyboard);
 	pendu->Update(dt,keyboard);
+	arrow->Update(dt, keyboard);
 	bat->Update(dt, keyboard);
 	viewport->Update(dt, keyboard, aladin->GetPosition(), aladin->GetVelocity(), map->listStage);
 
@@ -88,6 +94,7 @@ void ObjectManager::Render()
 	brick->Render(viewport);
 	brick2->Render(viewport);
 	pendu->Render(viewport);
+	arrow->Render(viewport);
 	aladin->Render(viewport);
 	bat->Render(viewport);
 }
