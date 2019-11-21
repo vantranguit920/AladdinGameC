@@ -144,10 +144,14 @@
     <ClCompile Include="Grid.cpp">
       <Filter>Map\Grid</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="Map3D.cpp">
       <Filter>Map</Filter>
     </ClCompile>
     <ClCompile Include="PointMap.cpp">
+=======
+    <ClCompile Include="Arrow.cpp">
+>>>>>>> 58c667ef1f8662df3ecfc0d27527f3bb7cdae012
       <Filter>Map</Filter>
     </ClCompile>
   </ItemGroup>
@@ -245,10 +249,14 @@
     <ClInclude Include="Grid.h">
       <Filter>Map\Grid</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="Map3D.h">
       <Filter>Map</Filter>
     </ClInclude>
     <ClInclude Include="PointMap.h">
+=======
+    <ClInclude Include="Arrow.h">
+>>>>>>> 58c667ef1f8662df3ecfc0d27527f3bb7cdae012
       <Filter>Map</Filter>
     </ClInclude>
   </ItemGroup>

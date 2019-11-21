@@ -1,4 +1,1 @@
-﻿  AladinState.cpp
-  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-c:\users\haiapple.com\desktop\aladdin\aladdigamec\aladdigamec\aladinstate.cpp(87): warning C4244: '=': conversion from 'FLOAT' to 'int', possible loss of data
-  AladdiGameC.vcxproj -> C:\Users\HaiApple.Com\Desktop\Aladdin\AladdiGameC\Debug\AladdiGameC.exe
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.Cpp.Platform.targets(67,5): error MSB8020: The build tools for v142 (Platform Toolset = 'v142') cannot be found. To build using the v142 build tools, please install v142 build tools.  Alternatively, you may upgrade to the current Visual Studio tools by selecting the Project menu or right-click the solution, and then selecting "Retarget solution".

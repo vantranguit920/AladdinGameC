@@ -33,12 +33,21 @@ void ObjectManager::Init(Graphic* graphic)
 	//
 	spritePendu = new Sprite(graphic, "./Resource Files/pendulum.png", D3DCOLOR_XRGB(163, 73, 164));
 	infoPendu = new SpriteSheet("./Resource Files/conlacxml.xml");
+
+	spriteArrow = new Sprite(graphic, "./Resource Files/arrow.png", D3DCOLOR_XRGB(163, 73, 164));
+	infoArrow = new SpriteSheet("./Resource Files/arrow.xml");
+
 	spriteBat = new Sprite(graphic, "./Resource Files/Batxml.png", D3DCOLOR_XRGB(163, 73, 164));
 	infoBat = new SpriteSheet("./Resource Files/Batsprite.xml");
 
 
 	pendu = new pendulum(spritePendu, infoPendu, D3DXVECTOR2(400, 621));
+<<<<<<< HEAD
 	brick = new Brick(spriteBrick, infoBrick, D3DXVECTOR2(350, 621));
+=======
+	arrow = new Arrow(spriteArrow, infoArrow, D3DXVECTOR2(320, 521));
+	brick = new Brick(spriteBrick, infoBrick, D3DXVECTOR2(350,621));
+>>>>>>> 58c667ef1f8662df3ecfc0d27527f3bb7cdae012
 	brick2 = new Brick(spriteBrick, infoBrick, D3DXVECTOR2(300, 621));
 	point = new PointMap();
 
@@ -86,7 +95,12 @@ void ObjectManager::Update(float dt, Keyboard* keyboard)
 
 	brick->Update(dt, keyboard);
 	brick2->Update(dt, keyboard);
+<<<<<<< HEAD
 	pendu->Update(dt, keyboard);
+=======
+	pendu->Update(dt,keyboard);
+	arrow->Update(dt, keyboard);
+>>>>>>> 58c667ef1f8662df3ecfc0d27527f3bb7cdae012
 	bat->Update(dt, keyboard);
 	for (auto o : objects) {
 		o->Update(dt, keyboard);
@@ -104,10 +118,14 @@ void ObjectManager::Render()
 	brick->Render(viewport);
 	brick2->Render(viewport);
 	pendu->Render(viewport);
+<<<<<<< HEAD
 
 	for (auto o : objects) {
 		o->Render(viewport);
 	}
+=======
+	arrow->Render(viewport);
+>>>>>>> 58c667ef1f8662df3ecfc0d27527f3bb7cdae012
 	aladin->Render(viewport);
 	bat->Render(viewport);
 	map2->Render(viewport);

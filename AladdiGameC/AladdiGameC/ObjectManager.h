@@ -8,6 +8,7 @@
 #include "Aladdin.h"
 #include "Brick.h"
 #include "pendulum.h"
+#include "Arrow.h"
 #include "Bat.h"
 #include "Grid.h"
 #include "Map3D.h"
@@ -51,6 +52,10 @@ protected:
 	pendulum *pendu;
 	Sprite *spritePendu;
 	SpriteSheet *infoPendu;
+
+	Arrow* arrow;
+	Sprite* spriteArrow;
+	SpriteSheet* infoArrow;
 
 	Bat *bat;
 	Sprite *spriteBat;
