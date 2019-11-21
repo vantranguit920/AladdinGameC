@@ -7,7 +7,7 @@
 #include "Viewport.h"
 #include "Aladdin.h"
 #include "Collision.h"
-class Bat:Object
+class Bat:public Object
 {
 protected:
 	Animation *batAnim;

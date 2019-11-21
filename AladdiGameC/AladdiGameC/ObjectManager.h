@@ -10,6 +10,9 @@
 #include "pendulum.h"
 #include "Arrow.h"
 #include "Bat.h"
+#include "Grid.h"
+#include "Map3D.h"
+#include "PointMap.h"
 
 class ObjectManager
 {
@@ -18,10 +21,11 @@ protected:
 
 	Viewport* viewport;
 	Map* map;
-	
-	
+	Map* map2;
+	Map3D* map3;
+	Grid* grid;
 
-
+	PointMap* point;
 
 	Sound *sound;
 	GSound *soundGame;
@@ -29,9 +33,10 @@ protected:
 	vector <Object*> listWall;
 	vector <Object*> listObject;
 	D3DXVECTOR2 prePosView;
-
+	D3DXVECTOR2 prePosAla;
+	D3DXVECTOR2 newPosAla;
 	
-	
+	float timeMap=0;
 	
 	int timecout = 0;
 
@@ -55,6 +60,7 @@ protected:
 	Bat *bat;
 	Sprite *spriteBat;
 	SpriteSheet *infoBat;
+	std::unordered_set<Object*> objects;
 
 public:
 	ObjectManager();
@@ -67,6 +73,6 @@ public:
 
 	//Vẽ Object lên màn hình 
 	void Render();
-
+	void ReadGrid(TiXmlElement *root,Grid *grid);
 	/*void ReadQuadTree(TiXmlElement *root, QuadTree *node, QuadTree *father, int indexNode);*/
 };

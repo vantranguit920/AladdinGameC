@@ -11,11 +11,11 @@ namespace Define
 	
 	//Map
 	const char TileSetPNG[] = "./Resource Files/aladin.png";
-	const char MapXML[] = "./Resource Files/aladin.tmx";
-
-	
-	
-
+	const char MapXML[] = "./Resource Files/Mapscene1.tmx";
+	const char MapXML2[] = "./Resource Files/backgroud.tmx";
+	const char GridXML[] = "./Resource Files/Grid.xml";
+	const char MapXML3[] = "./Resource Files/MapAla3.tmx";
+	const char TileSetPNG3[] = "./Resource Files/map3.png";
 	
 
 	//Speed

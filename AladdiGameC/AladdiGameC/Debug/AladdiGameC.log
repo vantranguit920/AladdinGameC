@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿  Aladdin.cpp
   C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
 E:\Aladin\AladdinGameC\AladdiGameC\AladdiGameC\Aladdin.cpp(90,41): warning C4305: 'argument': truncation from 'double' to 'FLOAT'
@@ -134,3 +135,6 @@ E:\Aladin\AladdinGameC\AladdiGameC\AladdiGameC\WinMain.cpp(15,33): warning C4244
   Generating Code...
 E:\Aladin\AladdinGameC\AladdiGameC\AladdiGameC\WinMain.cpp(15,23): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
   AladdiGameC.vcxproj -> E:\Aladin\AladdinGameC\AladdiGameC\Debug\AladdiGameC.exe
+=======
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.Cpp.Platform.targets(67,5): error MSB8020: The build tools for v142 (Platform Toolset = 'v142') cannot be found. To build using the v142 build tools, please install v142 build tools.  Alternatively, you may upgrade to the current Visual Studio tools by selecting the Project menu or right-click the solution, and then selecting "Retarget solution".
+>>>>>>> 10d3c58a0c16dbb75714132fe0e3d1afe4788b2c

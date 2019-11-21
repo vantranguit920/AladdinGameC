@@ -21,6 +21,9 @@ protected:
 	int top = 1280, bottom = 1056;*/
 
 	int start = 0;
+	int end = 2240;
+	int top = 1152;
+	int bottom = 0;
 	bool moveBossStage = false;
 	int newStart;
 	bool inStageBoss;

@@ -9,9 +9,10 @@ Map::Map()
 {
 }
 
-Map::Map(Graphic* graphic)
+Map::Map(Graphic* graphic, const char* pathMapxml, const char* pathMap)
 {
-	ReadXML(graphic, MapXML);
+	pahtMapPNG = (char*)pathMap;
+	ReadXML(graphic, pathMapxml);
 	position = D3DXVECTOR2(0, 0);
 	
 	RECT r;
@@ -34,6 +35,7 @@ Map::Map(Graphic* graphic)
 			float y = objectGroups.at(i)->objects.at(j)->y;
 			float w = objectGroups.at(i)->objects.at(j)->width;
 			float h = objectGroups.at(i)->objects.at(j)->height;
+			int alow = objectGroups.at(i)->objects.at(j)->alow;
 			D3DXVECTOR2 pos;
 			pos.x = x + w / 2;
 			pos.y = height * tileHeight - y - h / 2;
@@ -41,10 +43,12 @@ Map::Map(Graphic* graphic)
 			obj->SetBound(w, h);
 			obj->id = objectGroups.at(i)->objects.at(j)->id;
 			obj->SetName(objectGroups.at(i)->objects.at(j)->name);
+			obj->SetAllowDraw(alow);
 			grid->AddObject(obj);
 		}
 	}
-	WriteGrid(grid);
+	//save file Grid
+	//WriteGrid(grid);
 
 
 }
@@ -71,7 +75,7 @@ void Map::ReadXML(Graphic* graphic, const char *path)
 
 	//tileset
 	TiXmlElement* tileset = map->FirstChildElement();
-	tileSet = new TileSet(graphic, tileset);
+	tileSet = new TileSet(graphic, tileset, pahtMapPNG);
 
 	//layer
 	TiXmlElement* layer = tileset->NextSiblingElement();
@@ -98,9 +102,12 @@ void Map::ReadXML(Graphic* graphic, const char *path)
 		token = strtok(NULL, ",");
 	}
 	TiXmlElement* objectGroup = layer->NextSiblingElement();
-	MapObjectGroup *Enemy = new MapObjectGroup(objectGroup);
-	objectGroups.push_back(Enemy);
-	numObjectGroups++;
+	if (objectGroup != NULL) {
+		MapObjectGroup *Enemy = new MapObjectGroup(objectGroup);
+		objectGroups.push_back(Enemy);
+		numObjectGroups++;
+	}
+	
 
 	
 }
@@ -205,6 +212,7 @@ void Map::WriteCell(TiXmlElement * root, Grid * grid)
 				obj->SetAttribute("w", o->GetWidth());
 				obj->SetAttribute("h",o->GetHeight());
 				obj->SetAttribute("id", o->id);
+				obj->SetAttribute("alow", o->GetAllowDraw());
 				Cel->LinkEndChild(obj);
 				cout++;
 			}

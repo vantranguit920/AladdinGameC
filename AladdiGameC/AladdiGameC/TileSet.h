@@ -13,12 +13,13 @@ protected:
 	int tileWidth, tileHeight;
 	int id, columns, tileCount;
 	int margin;
+	D3DXVECTOR2 scale;
 
 public:
 	TileSet();
-	TileSet(Graphic* graphic, TiXmlElement *node);
+	TileSet(Graphic* graphic, TiXmlElement *node, const char* pathpng);
 	~TileSet();
-
+	void setScale(D3DXVECTOR2 scale);
 	void ReadXML(TiXmlElement *node);
 	int GetId();
 	void Render(Viewport* view, int id, D3DXVECTOR2 position);

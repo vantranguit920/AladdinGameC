@@ -15,7 +15,7 @@ Aladdin::Aladdin(Sprite *spAla, SpriteSheet *ifoAla)
 	sprite = spAla;
 	animAla = new AladdinAnimation(ifoAla);
 	stateAla = new AladinState(this);
-	position = D3DXVECTOR2(50, 520);
+	position = D3DXVECTOR2(320, 70);
 	SetBound(30, 34);
 	
 }
@@ -96,7 +96,7 @@ void Aladdin::Render(Viewport *viewport) {
 	
 	
 	sprite->SetPosition(position);	
-	printf("%f\n", position.y);
+	
 	sprite->Render(viewport);
 	
 	
