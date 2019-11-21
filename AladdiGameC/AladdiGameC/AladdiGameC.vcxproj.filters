@@ -46,6 +46,9 @@
     <Filter Include="Map\Grid">
       <UniqueIdentifier>{34cff001-9bba-44ab-a64a-81a8cd4b2b24}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Object\Guard">
+      <UniqueIdentifier>{2d69ff71-1eec-4212-a2df-31942d207594}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Animation.cpp">
@@ -147,6 +150,15 @@
     <ClCompile Include="Arrow.cpp">
       <Filter>Map</Filter>
     </ClCompile>
+    <ClCompile Include="Guard.cpp">
+      <Filter>Object\Guard</Filter>
+    </ClCompile>
+    <ClCompile Include="GuardAnimation.cpp">
+      <Filter>Object\Guard</Filter>
+    </ClCompile>
+    <ClCompile Include="GuardState.cpp">
+      <Filter>Object\Guard</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animation.h">
@@ -244,6 +256,15 @@
     </ClInclude>
     <ClInclude Include="Arrow.h">
       <Filter>Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Guard.h">
+      <Filter>Object\Guard</Filter>
+    </ClInclude>
+    <ClInclude Include="GuardAnimation.h">
+      <Filter>Object\Guard</Filter>
+    </ClInclude>
+    <ClInclude Include="GuardState.h">
+      <Filter>Object\Guard</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

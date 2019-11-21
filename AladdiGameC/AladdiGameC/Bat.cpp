@@ -24,8 +24,6 @@ void Bat::Update(float dt, Keyboard * key)
 			{
 				this->SetVelocity(0.5, 0.6);
 			}
-			
-
 		}
 	}
 
@@ -82,8 +80,6 @@ Bat::Bat(Sprite * sprite, SpriteSheet * info, D3DXVECTOR2 pos, Aladdin *aladin)
 	this->SetBound(30, 34);
 	flipFlag = false;
 	this->position = pos;
-	
-
 
 }
 

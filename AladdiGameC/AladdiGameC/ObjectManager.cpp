@@ -28,6 +28,7 @@ void ObjectManager::Init(Graphic* graphic)
 	//
 	spriteAladdin = new Sprite(graphic, "Aladdin_Sprite.png", D3DCOLOR_XRGB(255, 0, 255));
 	infoAlddin = new SpriteSheet("Aladdin-Animations.xml");
+
 	spriteBrick = new Sprite(graphic, "./Resource Files/Brick.png", D3DCOLOR_XRGB(163, 73, 164));
 	infoBrick = new SpriteSheet("./Resource Files/Brickxml.xml");
 	//

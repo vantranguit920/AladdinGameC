@@ -130,6 +130,9 @@
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Graphic.cpp" />
     <ClCompile Include="Grid.cpp" />
+    <ClCompile Include="Guard.cpp" />
+    <ClCompile Include="GuardAnimation.cpp" />
+    <ClCompile Include="GuardState.cpp" />
     <ClCompile Include="Keyboard.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="MapObject.cpp" />
@@ -167,6 +170,9 @@
     <ClInclude Include="Game.h" />
     <ClInclude Include="Graphic.h" />
     <ClInclude Include="Grid.h" />
+    <ClInclude Include="Guard.h" />
+    <ClInclude Include="GuardAnimation.h" />
+    <ClInclude Include="GuardState.h" />
     <ClInclude Include="Keyboard.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="MapObject.h" />
