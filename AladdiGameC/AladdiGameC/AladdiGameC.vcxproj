@@ -131,11 +131,13 @@
     <ClCompile Include="Grid.cpp" />
     <ClCompile Include="Keyboard.cpp" />
     <ClCompile Include="Map.cpp" />
+    <ClCompile Include="Map3D.cpp" />
     <ClCompile Include="MapObject.cpp" />
     <ClCompile Include="MapObjectGroup.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="ObjectManager.cpp" />
     <ClCompile Include="pendulum.cpp" />
+    <ClCompile Include="PointMap.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="Sound.cpp" />
     <ClCompile Include="Sprite.cpp" />
@@ -167,11 +169,13 @@
     <ClInclude Include="Grid.h" />
     <ClInclude Include="Keyboard.h" />
     <ClInclude Include="Map.h" />
+    <ClInclude Include="Map3D.h" />
     <ClInclude Include="MapObject.h" />
     <ClInclude Include="MapObjectGroup.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="ObjectManager.h" />
     <ClInclude Include="pendulum.h" />
+    <ClInclude Include="PointMap.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="Sound.h" />
     <ClInclude Include="Sprite.h" />

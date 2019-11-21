@@ -20,7 +20,7 @@ protected:
 	Grid *grid;
 	TileSet* tileSet;
 	vector<MapObjectGroup*> objectGroups;
-
+	char* pahtMapPNG;
 	D3DXVECTOR2 position;
 	
 public:
@@ -28,7 +28,7 @@ public:
 	std::vector<Stage*> listStage;
 
 	Map();
-	Map(Graphic* graphic);
+	Map(Graphic* graphic, const char* pathMapxml, const char* pathMap);
 	~Map();
 
 	void ReadXML(Graphic* graphic, const char *path);
@@ -37,7 +37,7 @@ public:
 
 	void Update(float dt);
 	void Render(Viewport * viewport);
-
+	
 
 	void WriteGrid(Grid *grid);
 	void WriteCell(TiXmlElement *root, Grid *grid);

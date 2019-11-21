@@ -23,12 +23,12 @@ AladinState::State AladinState::GetState() {
 void AladinState::CheckSide(Keyboard* keyboard) {
 	if (keyboard->IsKeyDown(DIK_RIGHT))
 	{
-		Aladdin->SetVelocityX(2.5f);
+		Aladdin->SetVelocityX(2.0f);
 		Aladdin->SetFlipFlag(false);
 	}
 	else if (keyboard->IsKeyDown(DIK_LEFT))
 	{
-		Aladdin->SetVelocityX(-2.5f);;
+		Aladdin->SetVelocityX(-2.0f);;
 		Aladdin->SetFlipFlag(true);
 	}
 	else Aladdin->SetVelocityX(0);

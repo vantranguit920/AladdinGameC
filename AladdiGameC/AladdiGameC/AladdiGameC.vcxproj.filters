@@ -144,6 +144,12 @@
     <ClCompile Include="Grid.cpp">
       <Filter>Map\Grid</Filter>
     </ClCompile>
+    <ClCompile Include="Map3D.cpp">
+      <Filter>Map</Filter>
+    </ClCompile>
+    <ClCompile Include="PointMap.cpp">
+      <Filter>Map</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animation.h">
@@ -238,6 +244,12 @@
     </ClInclude>
     <ClInclude Include="Grid.h">
       <Filter>Map\Grid</Filter>
+    </ClInclude>
+    <ClInclude Include="Map3D.h">
+      <Filter>Map</Filter>
+    </ClInclude>
+    <ClInclude Include="PointMap.h">
+      <Filter>Map</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -5,11 +5,11 @@ TileSet::TileSet()
 
 }
 
-TileSet::TileSet(Graphic* graphic, TiXmlElement *node)
+TileSet::TileSet(Graphic* graphic, TiXmlElement *node, const char* pathpng)
 {
 	ReadXML(node);
 
-	sprite = new Sprite(graphic, TileSetPNG,NULL);
+	sprite = new Sprite(graphic, pathpng, D3DCOLOR_XRGB(163, 73, 164));
 	for (int i = 0; i < tileCount; i++)
 	{
 
@@ -19,11 +19,17 @@ TileSet::TileSet(Graphic* graphic, TiXmlElement *node)
 		rect_tile[i].bottom = rect_tile[i].top + tileHeight;
 
 	}
+	scale = D3DXVECTOR2(1, 1);
 }
 
 TileSet::~TileSet()
 {
 	delete sprite;
+}
+
+void TileSet::setScale(D3DXVECTOR2 scale)
+{
+	this->scale = scale;
 }
 
 void TileSet::ReadXML(TiXmlElement *node)
@@ -47,6 +53,6 @@ void TileSet::Render(Viewport* view, int id, D3DXVECTOR2 position)
 {
 	sprite->SetRect(rect_tile[id-1 ]);
 	sprite->SetPosition(position);
-	//sprite->SetScale(D3DXVECTOR2(2,2));
+	sprite->SetScale(scale);
 	sprite->Render(view);
 }

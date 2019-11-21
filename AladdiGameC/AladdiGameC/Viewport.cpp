@@ -132,5 +132,16 @@ void Viewport::Update(float dt, Keyboard* key, D3DXVECTOR2 &posobject, D3DXVECTO
 			positionWorld.y = posobject.y + width / 2;
 		else if (positionWorld.y - posobject.y >= width / 2)
 			positionWorld.y = posobject.y + width / 2;
+
+
+		if (positionWorld.x < start)
+			positionWorld.x = start;
+		else if (positionWorld.x > end - width)
+			positionWorld.x = end - width;
+
+		if (positionWorld.y < height + bottom)
+			positionWorld.y = height + bottom;
+		else if (positionWorld.y > top)
+			positionWorld.y = top;
 	
 }
