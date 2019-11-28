@@ -121,7 +121,7 @@
     <ClCompile Include="AladdinAnimation.cpp" />
     <ClCompile Include="AladinState.cpp" />
     <ClCompile Include="Animation.cpp" />
-    <ClCompile Include="Arrow.cpp" />
+    <ClCompile Include="Drill.cpp" />
     <ClCompile Include="Bat.cpp" />
     <ClCompile Include="Brick.cpp" />
     <ClCompile Include="Cell.cpp" />
@@ -131,8 +131,6 @@
     <ClCompile Include="Graphic.cpp" />
     <ClCompile Include="Grid.cpp" />
     <ClCompile Include="Guard.cpp" />
-    <ClCompile Include="GuardAnimation.cpp" />
-    <ClCompile Include="GuardState.cpp" />
     <ClCompile Include="Keyboard.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="Map3D.cpp" />
@@ -161,7 +159,7 @@
     <ClInclude Include="AladdinAnimation.h" />
     <ClInclude Include="AladinState.h" />
     <ClInclude Include="Animation.h" />
-    <ClInclude Include="Arrow.h" />
+    <ClInclude Include="Drill.h" />
     <ClInclude Include="Bat.h" />
     <ClInclude Include="Brick.h" />
     <ClInclude Include="Cell.h" />
@@ -173,8 +171,6 @@
     <ClInclude Include="Graphic.h" />
     <ClInclude Include="Grid.h" />
     <ClInclude Include="Guard.h" />
-    <ClInclude Include="GuardAnimation.h" />
-    <ClInclude Include="GuardState.h" />
     <ClInclude Include="Keyboard.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="Map3D.h" />

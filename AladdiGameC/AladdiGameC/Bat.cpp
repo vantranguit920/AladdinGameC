@@ -55,19 +55,13 @@ void Bat::Render(Viewport * viewport)
 
 void Bat::setpos()
 {
-
-
 	D3DXVECTOR2 posAla = aladin->GetPosition();
 
-	
 	float c = (posAla.y - this->position.y) / (posAla.x - this->position.x);
 	float d = posAla.y - c * posAla.x;
 
 	this->position.x += 2.0;
 	this->position.y = c * this->position.x + d;
-
-
-
 }
 
 Bat::Bat(Sprite * sprite, SpriteSheet * info, D3DXVECTOR2 pos, Aladdin *aladin)

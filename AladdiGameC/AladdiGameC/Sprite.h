@@ -10,6 +10,7 @@ class Sprite
 protected:
 	Graphic* graphic;				
 	LPDIRECT3DTEXTURE9 texture;
+	SpriteSheet* InfoSprite;
 	char* pathpng;
 	float width;				
 	float height;
@@ -43,6 +44,7 @@ public:
 	virtual void SetTexture(const char* pathpng);
 
 	virtual RECT GetRect();
+	virtual RECT GetRect(int index);
 	virtual void SetRect(RECT rect);
 
 	virtual D3DXVECTOR2 GetPosition();

@@ -8,8 +8,9 @@
 #include "Aladdin.h"
 #include "Brick.h"
 #include "pendulum.h"
-#include "Arrow.h"
+#include "Drill.h"
 #include "Bat.h"
+#include "Guard.h"
 #include "Grid.h"
 #include "Map3D.h"
 #include "PointMap.h"
@@ -53,13 +54,18 @@ protected:
 	Sprite *spritePendu;
 	SpriteSheet *infoPendu;
 
-	Arrow* arrow;
-	Sprite* spriteArrow;
-	SpriteSheet* infoArrow;
+	Drill* drill;
+	Sprite* spriteDrill;
+	SpriteSheet* infoDrill;
 
 	Bat *bat;
 	Sprite *spriteBat;
 	SpriteSheet *infoBat;
+
+	Guard* guard;
+	Sprite* spriteGuard;
+	SpriteSheet* infoGuard;
+
 	std::unordered_set<Object*> objects;
 
 public:

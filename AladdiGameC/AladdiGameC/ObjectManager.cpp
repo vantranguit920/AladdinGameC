@@ -9,10 +9,6 @@ ObjectManager::~ObjectManager()
 
 	delete map;
 	delete viewport;
-
-
-
-
 }
 
 //Load Game
@@ -35,26 +31,36 @@ void ObjectManager::Init(Graphic* graphic)
 	spritePendu = new Sprite(graphic, "./Resource Files/pendulum.png", D3DCOLOR_XRGB(163, 73, 164));
 	infoPendu = new SpriteSheet("./Resource Files/conlacxml.xml");
 
-	spriteArrow = new Sprite(graphic, "./Resource Files/arrow.png", D3DCOLOR_XRGB(163, 73, 164));
-	infoArrow = new SpriteSheet("./Resource Files/arrow.xml");
+	spriteDrill = new Sprite(graphic, "./Resource Files/arrow.png", D3DCOLOR_XRGB(163, 73, 164));
+	infoDrill = new SpriteSheet("./Resource Files/arrow.xml");
 
 	spriteBat = new Sprite(graphic, "./Resource Files/Batxml.png", D3DCOLOR_XRGB(163, 73, 164));
 	infoBat = new SpriteSheet("./Resource Files/Batsprite.xml");
 
+	spriteGuard = new Sprite(graphic, "./Resource Files/Guard.png", D3DCOLOR_XRGB(163, 73, 164));
+	infoGuard = new SpriteSheet("./Resource Files/Guard.xml");
 
-	pendu = new pendulum(spritePendu, infoPendu, D3DXVECTOR2(400, 621));
-<<<<<<< HEAD
+
+	pendu = new pendulum(spritePendu, infoPendu, D3DXVECTOR2(900, 180));
+
 	brick = new Brick(spriteBrick, infoBrick, D3DXVECTOR2(350, 621));
-=======
-	arrow = new Arrow(spriteArrow, infoArrow, D3DXVECTOR2(320, 521));
+
+	drill = new Drill(spriteDrill, infoDrill, D3DXVECTOR2(320, 521));
 	brick = new Brick(spriteBrick, infoBrick, D3DXVECTOR2(350,621));
->>>>>>> 58c667ef1f8662df3ecfc0d27527f3bb7cdae012
-	brick2 = new Brick(spriteBrick, infoBrick, D3DXVECTOR2(300, 621));
+	brick2 = new Brick(spriteBrick, infoBrick, D3DXVECTOR2(600, 100));
+
+	
+
 	point = new PointMap();
 
 	brick2->setstate(Brick::close);
 	aladin = new Aladdin(spriteAladdin, infoAlddin);
+
 	bat = new Bat(spriteBat, infoBat, D3DXVECTOR2(-100, 621), aladin);
+	guard = new Guard(spriteGuard, infoGuard, D3DXVECTOR2(650, 80), aladin);
+	guard->GetState();
+
+
 	viewport = new Viewport(0, 1152);
 	map = new Map(graphic, MapXML, TileSetPNG);
 	map2 = new Map(graphic, MapXML2, TileSetPNG);
@@ -90,23 +96,25 @@ void ObjectManager::Update(float dt, Keyboard* keyboard)
 	
 	aladin->Update(dt, keyboard);
 
-	printf("%f\n", aladin->GetPosition().x);
+	printf("x = %f \t y= %f\n ", aladin->GetPosition().x, aladin->GetPosition().y);
 	//
 	//brick->SetPosition(D3DXVECTOR2(aladin->GetPosition().x,aladin->GetPosition().y-45));
 
 	brick->Update(dt, keyboard);
 	brick2->Update(dt, keyboard);
-<<<<<<< HEAD
 	pendu->Update(dt, keyboard);
-=======
+
 	pendu->Update(dt,keyboard);
-	arrow->Update(dt, keyboard);
->>>>>>> 58c667ef1f8662df3ecfc0d27527f3bb7cdae012
+	drill->Update(dt, keyboard);
+
+	guard->Update(dt, keyboard);
+
 	bat->Update(dt, keyboard);
 	for (auto o : objects) {
 		o->Update(dt, keyboard);
 	}
 	viewport->Update(dt, keyboard, aladin->GetPosition(), aladin->GetVelocity(), map->listStage);
+	
 
 	sound->LoopSound(soundGame);
 }
@@ -119,14 +127,15 @@ void ObjectManager::Render()
 	brick->Render(viewport);
 	brick2->Render(viewport);
 	pendu->Render(viewport);
-<<<<<<< HEAD
+
+	guard->Render(viewport);
 
 	for (auto o : objects) {
 		o->Render(viewport);
 	}
-=======
-	arrow->Render(viewport);
->>>>>>> 58c667ef1f8662df3ecfc0d27527f3bb7cdae012
+
+	drill->Render(viewport);
+
 	aladin->Render(viewport);
 	bat->Render(viewport);
 	map2->Render(viewport);
@@ -162,6 +171,8 @@ void ObjectManager::ReadGrid(TiXmlElement * root, Grid * grid)
 				else {
 					bat2->setstate(Brick::close);
 				}
+
+
 				grid->GetCell(x, y)->Add(bat2);
 				obj = obj->NextSiblingElement();
 			}

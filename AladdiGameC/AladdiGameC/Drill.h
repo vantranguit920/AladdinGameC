@@ -5,17 +5,17 @@
 #include "Animation.h"
 #include "Keyboard.h"
 #include "Viewport.h"
-class Arrow :public Object
+class Drill :public Object
 {
 protected:
-	Animation * arrowAnim;
+	Animation * drillAnim;
 public:
 	void ChangeAnim(Keyboard* key);
 	void Update(float dt, Keyboard* key);
 	void Render(Viewport* viewport);
-	Arrow();
-	Arrow(Sprite *sprite, SpriteSheet *info, D3DXVECTOR2 pos);
-	~Arrow();
+	Drill();
+	Drill(Sprite *sprite, SpriteSheet *info, D3DXVECTOR2 pos);
+	~Drill();
 };
 
 

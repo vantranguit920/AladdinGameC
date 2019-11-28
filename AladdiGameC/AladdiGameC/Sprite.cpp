@@ -67,6 +67,10 @@ void Sprite::SetRect(RECT rect)
 	this->rect = rect;
 }
 
+RECT Sprite::GetRect(int index) {
+	return InfoSprite->GetRect(index);
+}
+
 //Vị trí
 D3DXVECTOR2 Sprite::GetPosition()
 {

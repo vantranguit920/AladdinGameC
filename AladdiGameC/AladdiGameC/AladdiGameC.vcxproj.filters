@@ -1,284 +1,78 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-    <Filter Include="Component">
-      <UniqueIdentifier>{16e5401b-33d2-47c0-bb3c-7e94d3169d58}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Define">
-      <UniqueIdentifier>{639c37db-5c5d-4448-9263-a78e54bb9628}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Map">
-      <UniqueIdentifier>{3cabb0b4-33ec-4289-a513-bb0ec1b2381f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Object">
-      <UniqueIdentifier>{dc428ef4-da09-4b8f-8f43-df1b252e1e11}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Object\Aladin">
-      <UniqueIdentifier>{c5b4ab65-64b3-436c-9937-8afec903968c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Scene">
-      <UniqueIdentifier>{e916c9e0-c64b-44f0-8c02-ec495b876e83}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Sound">
-      <UniqueIdentifier>{5de3d8ff-6bf5-4ee5-95d1-44a0ac70b56c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Stage">
-      <UniqueIdentifier>{223279a6-18f1-4fd9-bbd2-b1d2c40e61a5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="TinyXML">
-      <UniqueIdentifier>{7f5f14e7-0411-4e17-82c0-afaf5c357ce9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Object\Enemy">
-      <UniqueIdentifier>{3d768fa4-901f-4fd8-87e5-1b994c5459bb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Map\Grid">
-      <UniqueIdentifier>{34cff001-9bba-44ab-a64a-81a8cd4b2b24}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Object\Guard">
-      <UniqueIdentifier>{2d69ff71-1eec-4212-a2df-31942d207594}</UniqueIdentifier>
-    </Filter>
+    <ClCompile Include="Aladdin.cpp" />
+    <ClCompile Include="AladdinAnimation.cpp" />
+    <ClCompile Include="AladinState.cpp" />
+    <ClCompile Include="Animation.cpp" />
+    <ClCompile Include="Bat.cpp" />
+    <ClCompile Include="Brick.cpp" />
+    <ClCompile Include="Cell.cpp" />
+    <ClCompile Include="Collision.cpp" />
+    <ClCompile Include="dsutil.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Graphic.cpp" />
+    <ClCompile Include="Grid.cpp" />
+    <ClCompile Include="Guard.cpp" />
+    <ClCompile Include="Keyboard.cpp" />
+    <ClCompile Include="Map.cpp" />
+    <ClCompile Include="Map3D.cpp" />
+    <ClCompile Include="MapObject.cpp" />
+    <ClCompile Include="MapObjectGroup.cpp" />
+    <ClCompile Include="Object.cpp" />
+    <ClCompile Include="ObjectManager.cpp" />
+    <ClCompile Include="pendulum.cpp" />
+    <ClCompile Include="PointMap.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="Sound.cpp" />
+    <ClCompile Include="Sprite.cpp" />
+    <ClCompile Include="SpriteSheet.cpp" />
+    <ClCompile Include="Stage.cpp" />
+    <ClCompile Include="Text.cpp" />
+    <ClCompile Include="TileSet.cpp" />
+    <ClCompile Include="TinyXML\tinystr.cpp" />
+    <ClCompile Include="TinyXML\tinyxml.cpp" />
+    <ClCompile Include="TinyXML\tinyxmlerror.cpp" />
+    <ClCompile Include="TinyXML\tinyxmlparser.cpp" />
+    <ClCompile Include="Viewport.cpp" />
+    <ClCompile Include="WinMain.cpp" />
+    <ClCompile Include="Drill.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Animation.cpp">
-      <Filter>Component</Filter>
-    </ClCompile>
-    <ClCompile Include="Collision.cpp">
-      <Filter>Component</Filter>
-    </ClCompile>
-    <ClCompile Include="Game.cpp">
-      <Filter>Component</Filter>
-    </ClCompile>
-    <ClCompile Include="Graphic.cpp">
-      <Filter>Component</Filter>
-    </ClCompile>
-    <ClCompile Include="Keyboard.cpp">
-      <Filter>Component</Filter>
-    </ClCompile>
-    <ClCompile Include="Sprite.cpp">
-      <Filter>Component</Filter>
-    </ClCompile>
-    <ClCompile Include="SpriteSheet.cpp">
-      <Filter>Component</Filter>
-    </ClCompile>
-    <ClCompile Include="Viewport.cpp">
-      <Filter>Component</Filter>
-    </ClCompile>
-    <ClCompile Include="WinMain.cpp">
-      <Filter>Component</Filter>
-    </ClCompile>
-    <ClCompile Include="Text.cpp">
-      <Filter>Component</Filter>
-    </ClCompile>
-    <ClCompile Include="Map.cpp">
-      <Filter>Map</Filter>
-    </ClCompile>
-    <ClCompile Include="MapObject.cpp">
-      <Filter>Map</Filter>
-    </ClCompile>
-    <ClCompile Include="MapObjectGroup.cpp">
-      <Filter>Map</Filter>
-    </ClCompile>
-    <ClCompile Include="TileSet.cpp">
-      <Filter>Map</Filter>
-    </ClCompile>
-    <ClCompile Include="TinyXML\tinystr.cpp">
-      <Filter>TinyXML</Filter>
-    </ClCompile>
-    <ClCompile Include="TinyXML\tinyxml.cpp">
-      <Filter>TinyXML</Filter>
-    </ClCompile>
-    <ClCompile Include="TinyXML\tinyxmlerror.cpp">
-      <Filter>TinyXML</Filter>
-    </ClCompile>
-    <ClCompile Include="TinyXML\tinyxmlparser.cpp">
-      <Filter>TinyXML</Filter>
-    </ClCompile>
-    <ClCompile Include="Stage.cpp">
-      <Filter>Stage</Filter>
-    </ClCompile>
-    <ClCompile Include="dsutil.cpp">
-      <Filter>Sound</Filter>
-    </ClCompile>
-    <ClCompile Include="Sound.cpp">
-      <Filter>Sound</Filter>
-    </ClCompile>
-    <ClCompile Include="Scene.cpp">
-      <Filter>Scene</Filter>
-    </ClCompile>
-    <ClCompile Include="Aladdin.cpp">
-      <Filter>Object\Aladin</Filter>
-    </ClCompile>
-    <ClCompile Include="AladdinAnimation.cpp">
-      <Filter>Object\Aladin</Filter>
-    </ClCompile>
-    <ClCompile Include="AladinState.cpp">
-      <Filter>Object\Aladin</Filter>
-    </ClCompile>
-    <ClCompile Include="Object.cpp">
-      <Filter>Object</Filter>
-    </ClCompile>
-    <ClCompile Include="ObjectManager.cpp">
-      <Filter>Object</Filter>
-    </ClCompile>
-    <ClCompile Include="Brick.cpp">
-      <Filter>Map</Filter>
-    </ClCompile>
-    <ClCompile Include="pendulum.cpp">
-      <Filter>Map</Filter>
-    </ClCompile>
-    <ClCompile Include="Bat.cpp">
-      <Filter>Object\Enemy</Filter>
-    </ClCompile>
-    <ClCompile Include="Cell.cpp">
-      <Filter>Map\Grid</Filter>
-    </ClCompile>
-    <ClCompile Include="Grid.cpp">
-      <Filter>Map\Grid</Filter>
-    </ClCompile>
-<<<<<<< HEAD
-    <ClCompile Include="Map3D.cpp">
-      <Filter>Map</Filter>
-    </ClCompile>
-    <ClCompile Include="PointMap.cpp">
-=======
-    <ClCompile Include="Arrow.cpp">
->>>>>>> 58c667ef1f8662df3ecfc0d27527f3bb7cdae012
-      <Filter>Map</Filter>
-    </ClCompile>
-    <ClCompile Include="Guard.cpp">
-      <Filter>Object\Guard</Filter>
-    </ClCompile>
-    <ClCompile Include="GuardAnimation.cpp">
-      <Filter>Object\Guard</Filter>
-    </ClCompile>
-    <ClCompile Include="GuardState.cpp">
-      <Filter>Object\Guard</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Animation.h">
-      <Filter>Component</Filter>
-    </ClInclude>
-    <ClInclude Include="Collision.h">
-      <Filter>Component</Filter>
-    </ClInclude>
-    <ClInclude Include="Game.h">
-      <Filter>Component</Filter>
-    </ClInclude>
-    <ClInclude Include="Graphic.h">
-      <Filter>Component</Filter>
-    </ClInclude>
-    <ClInclude Include="Keyboard.h">
-      <Filter>Component</Filter>
-    </ClInclude>
-    <ClInclude Include="Sprite.h">
-      <Filter>Component</Filter>
-    </ClInclude>
-    <ClInclude Include="SpriteSheet.h">
-      <Filter>Component</Filter>
-    </ClInclude>
-    <ClInclude Include="Viewport.h">
-      <Filter>Component</Filter>
-    </ClInclude>
-    <ClInclude Include="Text.h">
-      <Filter>Component</Filter>
-    </ClInclude>
-    <ClInclude Include="Define.h">
-      <Filter>Define</Filter>
-    </ClInclude>
-    <ClInclude Include="Map.h">
-      <Filter>Map</Filter>
-    </ClInclude>
-    <ClInclude Include="MapObject.h">
-      <Filter>Map</Filter>
-    </ClInclude>
-    <ClInclude Include="MapObjectGroup.h">
-      <Filter>Map</Filter>
-    </ClInclude>
-    <ClInclude Include="TileSet.h">
-      <Filter>Map</Filter>
-    </ClInclude>
-    <ClInclude Include="TinyXML\tinystr.h">
-      <Filter>TinyXML</Filter>
-    </ClInclude>
-    <ClInclude Include="TinyXML\tinyxml.h">
-      <Filter>TinyXML</Filter>
-    </ClInclude>
-    <ClInclude Include="Stage.h">
-      <Filter>Stage</Filter>
-    </ClInclude>
-    <ClInclude Include="dsutil.h">
-      <Filter>Sound</Filter>
-    </ClInclude>
-    <ClInclude Include="dxutil.h">
-      <Filter>Sound</Filter>
-    </ClInclude>
-    <ClInclude Include="Sound.h">
-      <Filter>Sound</Filter>
-    </ClInclude>
-    <ClInclude Include="Scene.h">
-      <Filter>Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="Aladdin.h">
-      <Filter>Object\Aladin</Filter>
-    </ClInclude>
-    <ClInclude Include="AladdinAnimation.h">
-      <Filter>Object\Aladin</Filter>
-    </ClInclude>
-    <ClInclude Include="AladinState.h">
-      <Filter>Object\Aladin</Filter>
-    </ClInclude>
-    <ClInclude Include="Object.h">
-      <Filter>Object</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjectManager.h">
-      <Filter>Object</Filter>
-    </ClInclude>
-    <ClInclude Include="Brick.h">
-      <Filter>Map</Filter>
-    </ClInclude>
-    <ClInclude Include="pendulum.h">
-      <Filter>Map</Filter>
-    </ClInclude>
-    <ClInclude Include="Bat.h">
-      <Filter>Object\Enemy</Filter>
-    </ClInclude>
-    <ClInclude Include="Cell.h">
-      <Filter>Map\Grid</Filter>
-    </ClInclude>
-    <ClInclude Include="Grid.h">
-      <Filter>Map\Grid</Filter>
-    </ClInclude>
-<<<<<<< HEAD
-    <ClInclude Include="Map3D.h">
-      <Filter>Map</Filter>
-    </ClInclude>
-    <ClInclude Include="PointMap.h">
-=======
-    <ClInclude Include="Arrow.h">
->>>>>>> 58c667ef1f8662df3ecfc0d27527f3bb7cdae012
-      <Filter>Map</Filter>
-    </ClInclude>
-    <ClInclude Include="Guard.h">
-      <Filter>Object\Guard</Filter>
-    </ClInclude>
-    <ClInclude Include="GuardAnimation.h">
-      <Filter>Object\Guard</Filter>
-    </ClInclude>
-    <ClInclude Include="GuardState.h">
-      <Filter>Object\Guard</Filter>
-    </ClInclude>
+    <ClInclude Include="Aladdin.h" />
+    <ClInclude Include="AladdinAnimation.h" />
+    <ClInclude Include="AladinState.h" />
+    <ClInclude Include="Animation.h" />
+    <ClInclude Include="Bat.h" />
+    <ClInclude Include="Brick.h" />
+    <ClInclude Include="Cell.h" />
+    <ClInclude Include="Collision.h" />
+    <ClInclude Include="Define.h" />
+    <ClInclude Include="dsutil.h" />
+    <ClInclude Include="dxutil.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="Graphic.h" />
+    <ClInclude Include="Grid.h" />
+    <ClInclude Include="Guard.h" />
+    <ClInclude Include="Keyboard.h" />
+    <ClInclude Include="Map.h" />
+    <ClInclude Include="Map3D.h" />
+    <ClInclude Include="MapObject.h" />
+    <ClInclude Include="MapObjectGroup.h" />
+    <ClInclude Include="Object.h" />
+    <ClInclude Include="ObjectManager.h" />
+    <ClInclude Include="pendulum.h" />
+    <ClInclude Include="PointMap.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="Sound.h" />
+    <ClInclude Include="Sprite.h" />
+    <ClInclude Include="SpriteSheet.h" />
+    <ClInclude Include="Stage.h" />
+    <ClInclude Include="Text.h" />
+    <ClInclude Include="TileSet.h" />
+    <ClInclude Include="TinyXML\tinystr.h" />
+    <ClInclude Include="TinyXML\tinyxml.h" />
+    <ClInclude Include="Viewport.h" />
+    <ClInclude Include="Drill.h" />
   </ItemGroup>
 </Project>
