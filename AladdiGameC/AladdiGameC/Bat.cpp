@@ -9,6 +9,7 @@ void Bat::ChangeAnim(Keyboard * key)
 
 void Bat::Update(float dt, Keyboard * key)
 {
+
 	if (timecout < 2.0f) {
 		this->SetVelocity(-0.2, -0.7);    
 	}

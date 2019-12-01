@@ -2,11 +2,34 @@
 
 void Arrow::ChangeAnim(Keyboard* key)
 {
-	arrowAnim->SetFrame(position, flipFlag, 20, 0, 10, true);
+	
+	switch (this->state)
+	{
+	case Arrow::oppen:
+		arrowAnim->SetFrame(position, flipFlag, 5, 0, 5, false);
+		break;
+	case Arrow::close:
+		arrowAnim->SetFrame(position, flipFlag, 5, 5, 10, false);
+		break;
+
+	}
+
+
 }
 
 void Arrow::Update(float dt, Keyboard* key)
 {
+	if (timecout >= 3.0f) {
+
+		if (this->state == Arrow::close) {
+			this->setstate(Arrow::oppen);
+		}
+		else {
+			this->setstate(Arrow::close);
+		}
+		timecout = 0;
+	}
+	timecout += dt;
 	ChangeAnim(key);
 	Object::Update(dt, key);
 	arrowAnim->Update(dt, key);
@@ -32,6 +55,11 @@ void Arrow::Render(Viewport* viewport)
 	}
 }
 
+void Arrow::setstate(ArrowState state)
+{
+	this->state = state;
+}
+
 Arrow::Arrow()
 {
 }
@@ -44,6 +72,7 @@ Arrow::Arrow(Sprite* sprite, SpriteSheet* info, D3DXVECTOR2 pos)
 	this->allowDraw = true;
 	flipFlag = false;
 	this->position = pos;
+	this->state = ArrowState::oppen;
 
 }
 

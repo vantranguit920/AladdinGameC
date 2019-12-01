@@ -25,7 +25,7 @@ public:
 	SpriteSheet(const char* path);
 	~SpriteSheet();
 
-	Tile tile[200];
+	Tile tile[300];
 
 	float GetWidth();
 	float GetHeight();

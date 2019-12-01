@@ -11,11 +11,11 @@ Aladdin::Aladdin(Sprite *spAla, SpriteSheet *ifoAla)
 
 
 	tag = Object::Player;
-	pathPNG = "aladdin.png";
+	//pathPNG = "aladdin.png";
 	sprite = spAla;
 	animAla = new AladdinAnimation(ifoAla);
 	stateAla = new AladinState(this);
-	position = D3DXVECTOR2(320, 70);
+	position = D3DXVECTOR2(350, 550);
 	SetBound(30, 34);
 	
 }

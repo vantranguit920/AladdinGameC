@@ -1,5 +1,4 @@
-﻿
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Animations>
   <Animation name="Jump" imagePath="Aladdin_trans.png" width="1121" height="2718">
     <sprite x="8" pX="0.5" pY="0.5" y="846" w="59" h="42" oX="-1" oY="-1" oW="888" oH="324" />
