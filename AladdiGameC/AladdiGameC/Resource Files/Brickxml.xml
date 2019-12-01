@@ -8,6 +8,7 @@
     <sprite n="4.png" x="52" y="1" w="43" h="31" pX="0.5" pY="0.5"/>
     <sprite n="5.png" x="1" y="1" w="49" h="31" pX="0.5" pY="0.5"/>
   </Animation>
+  
   <Animation name="close" imagePath="Brick.png" width="85" height="10">
     <sprite n="5.png" x="1" y="1" w="49" h="31" pX="0.5" pY="0.5"/>
     <sprite n="4.png" x="52" y="1" w="43" h="31" pX="0.5" pY="0.5"/>

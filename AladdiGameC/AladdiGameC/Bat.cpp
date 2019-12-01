@@ -25,8 +25,6 @@ void Bat::Update(float dt, Keyboard * key)
 			{
 				this->SetVelocity(0.5, 0.6);
 			}
-			
-
 		}
 	}
 
@@ -58,19 +56,13 @@ void Bat::Render(Viewport * viewport)
 
 void Bat::setpos()
 {
-
-
 	D3DXVECTOR2 posAla = aladin->GetPosition();
 
-	
 	float c = (posAla.y - this->position.y) / (posAla.x - this->position.x);
 	float d = posAla.y - c * posAla.x;
 
 	this->position.x += 2.0;
 	this->position.y = c * this->position.x + d;
-
-
-
 }
 
 Bat::Bat(Sprite * sprite, SpriteSheet * info, D3DXVECTOR2 pos, Aladdin *aladin)
@@ -83,8 +75,6 @@ Bat::Bat(Sprite * sprite, SpriteSheet * info, D3DXVECTOR2 pos, Aladdin *aladin)
 	this->SetBound(30, 34);
 	flipFlag = false;
 	this->position = pos;
-	
-
 
 }
 
